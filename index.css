@@ -1,20 +1,90 @@
-
-body{
+body {
     margin: 0;
 }
-
-.hot{
-    border: 1px dotted black;
-width: 100%;
-
+body header nav{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    color: white;
+    /* padding:0.5rem; */
+    font-size: 3em;
 }
-.juicy{
+/* Main content */
+.main {
+    margin-top: 30px; /* Add a top margin to avoid content overlay */
+  }
+
+/* section>img { */
+section {
+    /* width: 100vw;
+    height: 100vh; */
+    width: 100%;
+    height: 100%;
+    /* border: 1px dotted black; */
+}
+
+/* .hot {
     border: 1px dotted black;
     width: 100%;
+
+}
+
+.juicy {
+    border: 1px dotted black;
+    width: 100%;
+
+}
+
+.cosy {
+    border: 1px dotted black;
+    width: 100%;
+
+} */
+
+.container {
+    position: relative;
+    text-align: center;
+    
+    color: white;
+    font-size: 1rem; /*TODO*/
+    font-family: sans-serif;/*TODO*/
+}
+h1{
+/* section div .title { */
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    color: red; /*TODO*/
+    font-size: 2rem; /*TODO*/
+    font-family: cursive; /*TODO*/
+}
+section div .text1{
+    position: absolute;
+    top: 40%;
+    left: 3%;
+    background-color: red; /*TODO*/
+    opacity: 0.5;
+    padding: 1rem;
     
 }
-.cosy{
-    border: 1px dotted black;
-    width: 100%;
+section div .text2{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    background-color: red;/*TODO*/
+    opacity: 0.5;
+    padding: 1rem;
+    
+}
+section div .info-price{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    background-color: black;/*TODO*/
+    opacity: 0.5;
+    padding: 1rem;
     
 }
