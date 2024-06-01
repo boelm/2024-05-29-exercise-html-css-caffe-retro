@@ -1,90 +1,110 @@
 body {
     margin: 0;
+    background-color: black;
 }
-body header nav{
-    position:fixed;
+
+body header nav {
+    position: fixed;
+    z-index: 1;
     top: 0;
     left: 0;
     width: 100%;
     background-color: black;
-    opacity: 0.5;
-    color: white;
-    /* padding:0.5rem; */
+    padding: 0.5rem;
     font-size: 3em;
-}
-/* Main content */
-.main {
-    margin-top: 30px; /* Add a top margin to avoid content overlay */
-  }
+    font-family: "Spirax", sans-serif;
 
-/* section>img { */
+    display: flex;
+    justify-content: center;
+}
+
+body header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0 2rem;
+}
+
+body header nav a:hover {
+    color: #700101;
+}
+
+body header nav a:visited {
+    color: white;
+}
+
 section {
-    /* width: 100vw;
-    height: 100vh; */
     width: 100%;
-    height: 100%;
-    /* border: 1px dotted black; */
+    height: 90%;
+    /*TODO: Fungerar, bild under nav. Men varför? */
 }
 
-/* .hot {
-    border: 1px dotted black;
-    width: 100%;
-
-}
-
-.juicy {
-    border: 1px dotted black;
-    width: 100%;
-
-}
-
-.cosy {
-    border: 1px dotted black;
-    width: 100%;
-
-} */
-
-.container {
+section .container {
     position: relative;
     text-align: center;
-    
     color: white;
-    font-size: 1rem; /*TODO*/
-    font-family: sans-serif;/*TODO*/
 }
-h1{
-/* section div .title { */
+
+h1 {
     position: absolute;
-    top: 20%;
-    left: 50%;
-    color: red; /*TODO*/
-    font-size: 2rem; /*TODO*/
-    font-family: cursive; /*TODO*/
+    top: 5%;
+    left: 10%;
+    right: 10%;
+    color: #700101;
+    font-size: 4rem;
+    font-family: "Spirax", sans-serif;
 }
-section div .text1{
+
+section .container div {
     position: absolute;
-    top: 40%;
-    left: 3%;
-    background-color: red; /*TODO*/
-    opacity: 0.5;
-    padding: 1rem;
+    font-family: "Poiret One", sans-serif;
+    color: white;
+    background-color: #700101;
+    padding: 0.5rem;
+}
+
+section div .text1 {
+    top: 25%;
+    left: 20%;
+    right: 40%;
+}
+
+section div .text2 {
+    /* Hide this element if screen is not wide enough (see @media below) */
+    opacity: 1;
     
-}
-section div .text2{
-    position: absolute;
-    top: 60%;
+    top: 35%;
     left: 50%;
-    background-color: red;/*TODO*/
-    opacity: 0.5;
-    padding: 1rem;
-    
+    right: 20%;
 }
-section div .info-price{
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    background-color: black;/*TODO*/
-    opacity: 0.5;
-    padding: 1rem;
-    
+
+section div .info-price {
+    top: 50%;
+    bottom: 20%;
+    left: 35%;
+    right: 35%;
+    background-color: black;
+}
+
+section div .info-price>p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+section .container div .text-left {
+    clear: left;
+    float: left;
+}
+
+section .container div .text-right {
+    clear: right;
+    float: right;
+}
+
+
+@media screen and (max-width: 400px) {
+
+    /* Styles for screens with a maximum width of 400px */
+    section div .text2 {
+        opacity: 0;
+    }
 }
